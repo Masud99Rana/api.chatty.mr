@@ -1,0 +1,9 @@
+
+
+installation / Command
+=======================
+=======================
+npm i typescript
+npm i -g typescript
+tsc --init
+
