@@ -3,7 +3,77 @@
 installation / Command
 =======================
 =======================
-npm i typescript
-npm i -g typescript
-tsc --init
+=======================
+
+> npm init -y
+
+## Config typescript
+=======================
+> npm i typescript
+> npm i -g typescript
+> tsc --init
+
+> npm i ts-node -D
+
+> npm i tsconfig-paths --save-dev
+
+
+## Install express
+> npm i express 
+> npm i -D @types/express
+
+
+Change absolute imports
+========================
+ttypescript
+https://www.npmjs.com/package/ttypescript
+Over TypeScript tool to use custom transformers in the tsconfig.json
+
+> npm i ttypescript typescript-transform-paths
+
+
+## Database
+===========
+> npm i mongoose
+
+
+## Install basic packages
+=========================
+> npm i cors helmet hpp cookie-session compression express-async-errors http-status-codes
+
+> npm i -D @types/cors @types/hpp @types/cookie-session @types/compression
+
+
+## Config
+===========
+> npm i dotenv
+
+
+## Socket, Redis
+==================
+> npm i @socket.io/redis-adapter redis socket.io
+
+
+## Logging
+===========
+Bunyan is a simple and fast JSON logging library for node.js services:
+https://www.npmjs.com/package/bunyan#current-status
+
+> npm i bunyan
+> npm i -D @types/bunyan 
+
+
+## Coding Style, Code Formatter
+================================
+https://editorconfig.org/
+> npm i --D eslint prettier eslint-config-prettier  @typescript-eslint/eslint-plugin @typescript-eslint/parser 
+
+
+## Git Ignore
+=================
+https://www.toptal.com/developers/gitignore/api/node
+
+develop
+staging
+main
 
