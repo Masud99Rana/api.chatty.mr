@@ -19,7 +19,7 @@ installation / Command
 
 
 ## Install express
-> npm i express 
+> npm i express
 > npm i -D @types/express
 
 
@@ -60,13 +60,13 @@ Bunyan is a simple and fast JSON logging library for node.js services:
 https://www.npmjs.com/package/bunyan#current-status
 
 > npm i bunyan
-> npm i -D @types/bunyan 
+> npm i -D @types/bunyan
 
 
 ## Coding Style, Code Formatter
 ================================
 https://editorconfig.org/
-> npm i --D eslint prettier eslint-config-prettier  @typescript-eslint/eslint-plugin @typescript-eslint/parser 
+> npm i --D eslint prettier eslint-config-prettier  @typescript-eslint/eslint-plugin @typescript-eslint/parser
 
 
 ## Git Ignore
@@ -76,4 +76,12 @@ https://www.toptal.com/developers/gitignore/api/node
 develop
 staging
 main
+
+
+## Others
+=================
+
+> npm i cloudinary
+> npm i joi
+
 
