@@ -89,9 +89,12 @@ main
 ======================
 
 > npm i bull@^4.10.4 bullmq@^3.10.0 @bull-board/express@^4.12.1
+> npm i @bull-board/ui@^4.1.1
 > npm i -D @types/bull@^4.10.0
 
-> Problem
+
+
+>> Problem in below mentioned version
 Module '"@bull-board/express"' has no exported member 'BullAdapter'.
 
 https://github.com/felixmosh/bull-board/blob/master/examples/with-express/index.js
