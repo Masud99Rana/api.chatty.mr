@@ -78,10 +78,50 @@ staging
 main
 
 
+## Template Engine
+======================
+
+> npm i ejs
+> npm i -D @types/ejs
+
+
+## Bull
+======================
+
+> npm i bull@^4.10.4 bullmq@^3.10.0 @bull-board/express@^4.12.1
+> npm i -D @types/bull@^4.10.0
+
+> Problem
+Module '"@bull-board/express"' has no exported member 'BullAdapter'.
+
+https://github.com/felixmosh/bull-board/blob/master/examples/with-express/index.js
+
+    "@bull-board/express": "^5.8.1",
+    "bull": "^4.11.3",
+    "bullmq": "^4.9.0",
+
+    dev
+        "@types/bull": "^4.10.0",
+
+
+## Email
+======================
+
+> npm i nodemailer @sendgrid/mail
+> npm i -D @types/nodemailer
+
+
+
 ## Others
 =================
 
 > npm i cloudinary
 > npm i joi
 
+> npm i bcryptjs
+> npm i --save-dev @types/bcryptjs
 
+> npm i jsonwebtoken lodash
+> npm i --save-dev @types/jsonwebtoken @types/lodash
+
+> npm i --save-dev @types/ip

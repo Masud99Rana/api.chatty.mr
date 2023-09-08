@@ -10,12 +10,6 @@ export function joiValidation(schema: ObjectSchema): IJoiDecorator {
     const originalMethod = descriptor.value;
 
     descriptor.value = async function (...args: any[]) {
-      //
-      // function signup(req,res, next)
-      // here args[0] => req
-      // here args[1] => next
-      //
-
       const req: Request = args[0];
       const { error } = await Promise.resolve(schema.validate(req.body));
       if (error?.details) {
@@ -26,8 +20,3 @@ export function joiValidation(schema: ObjectSchema): IJoiDecorator {
     return descriptor;
   };
 }
-
-//
-// function signup(req,res, next)
-// here args[0] => req
-// here args[1] => next
