@@ -78,12 +78,6 @@ staging
 main
 
 
-## Template Engine
-======================
-
-> npm i ejs
-> npm i -D @types/ejs
-
 
 ## Bull
 ======================
@@ -110,8 +104,26 @@ https://github.com/felixmosh/bull-board/blob/master/examples/with-express/index.
 ## Email
 ======================
 
+https://ethereal.email/create
+
+
 > npm i nodemailer @sendgrid/mail
 > npm i -D @types/nodemailer
+
+
+## Template Engine
+======================
+
+> npm i ejs
+> npm i -D @types/ejs
+
+
+
+## Testing
+=====================
+
+> npm i @jest/types
+> npm i -D jest ts-jest @types/jest
 
 
 
@@ -127,4 +139,6 @@ https://github.com/felixmosh/bull-board/blob/master/examples/with-express/index.
 > npm i jsonwebtoken lodash
 > npm i --save-dev @types/jsonwebtoken @types/lodash
 
+
+> npm i moment ip
 > npm i --save-dev @types/ip

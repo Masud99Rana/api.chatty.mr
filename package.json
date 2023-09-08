@@ -15,6 +15,7 @@
     "prettier-w:check": "prettier --check src/**/*.{ts,json}",
     "prettier:fix": "prettier --write 'src/**/*.{ts,json}'",
     "prettier-w:fix": "prettier --write src/**/*.{ts,json}",
+    "test": "jest --coverage=true -w=1 --forceExit --detectOpenHandles --watchAll=true",
     "build": "ttsc -p ."
   },
   "keywords": [],
@@ -23,6 +24,7 @@
   "dependencies": {
     "@bull-board/express": "^4.12.2",
     "@bull-board/ui": "^4.12.2",
+    "@jest/types": "^29.6.3",
     "@sendgrid/mail": "^7.7.0",
     "@socket.io/redis-adapter": "^8.2.1",
     "bcryptjs": "^2.4.3",
@@ -40,9 +42,11 @@
     "helmet": "^7.0.0",
     "hpp": "^0.2.3",
     "http-status-codes": "^2.2.0",
+    "ip": "^2.0.0",
     "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.1",
     "lodash": "^4.17.21",
+    "moment": "^2.29.4",
     "mongoose": "^7.4.3",
     "nodemailer": "^6.9.5",
     "redis": "^4.6.7",
@@ -62,6 +66,7 @@
     "@types/express": "^4.17.17",
     "@types/hpp": "^0.2.2",
     "@types/ip": "^1.1.0",
+    "@types/jest": "^29.5.4",
     "@types/jsonwebtoken": "^9.0.2",
     "@types/lodash": "^4.14.197",
     "@types/nodemailer": "^6.4.9",
@@ -69,7 +74,9 @@
     "@typescript-eslint/parser": "^6.4.0",
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
+    "jest": "^29.6.4",
     "prettier": "^3.0.2",
+    "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0"
   }
