@@ -1,13 +1,13 @@
-import mongoose from 'mongoose';
-import { PushOperator } from 'mongodb';
 import { UserModel } from '@user/models/user.schema';
+import { PushOperator } from 'mongodb';
+import mongoose, { ObjectId } from 'mongoose';
 
 class BlockUserService {
   public async blockUser(userId: string, followerId: string): Promise<void> {
     UserModel.bulkWrite([
       {
         updateOne: {
-          filter: { _id: userId, blocked: { $ne: new mongoose.Types.ObjectId(followerId) } },
+          filter: { _id: userId as unknown as ObjectId, blocked: { $ne: new mongoose.Types.ObjectId(followerId) } },
           update: {
             $push: {
               blocked: new mongoose.Types.ObjectId(followerId)
@@ -17,7 +17,7 @@ class BlockUserService {
       },
       {
         updateOne: {
-          filter: { _id: followerId, blockedBy: { $ne: new mongoose.Types.ObjectId(userId) } },
+          filter: { _id: followerId as unknown as ObjectId, blockedBy: { $ne: new mongoose.Types.ObjectId(userId) } },
           update: {
             $push: {
               blockedBy: new mongoose.Types.ObjectId(userId)
