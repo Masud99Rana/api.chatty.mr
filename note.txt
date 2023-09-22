@@ -119,11 +119,20 @@ https://ethereal.email/create
 
 
 
+## swagger-stats
+=====================
+> npm i swagger-stats
+> npm i -D @types/swagger-stats
+
+
+
 ## Testing
 =====================
 
 > npm i @jest/types
 > npm i -D jest ts-jest @types/jest
+
+
 
 
 
