@@ -1,17 +1,17 @@
 import { Helpers } from '@global/helpers/helpers';
-import { INotificationDocument, INotificationTemplate } from '@notification/interfaces/notification.interface';
-import { NotificationModel } from '@notification/models/notification.schema';
 import { IPostDocument } from '@post/interfaces/post.interface';
 import { PostModel } from '@post/models/post.schema';
 import { IQueryReaction, IReactionDocument, IReactionJob } from '@reaction/interfaces/reaction.interface';
 import { ReactionModel } from '@reaction/models/reaction.schema';
-import { notificationTemplate } from '@service/emails/templates/notifications/notification-template';
-import { emailQueue } from '@service/queues/email.queue';
 import { UserCache } from '@service/redis/user.cache';
-import { socketIONotificationObject } from '@socket/notification';
 import { IUserDocument } from '@user/interfaces/user.interface';
 import { omit } from 'lodash';
 import mongoose from 'mongoose';
+import { INotificationDocument, INotificationTemplate } from '@notification/interfaces/notification.interface';
+import { NotificationModel } from '@notification/models/notification.schema';
+import { socketIONotificationObject } from '@socket/notification';
+import { notificationTemplate } from '@service/emails/templates/notifications/notification-template';
+import { emailQueue } from '@service/queues/email.queue';
 
 const userCache: UserCache = new UserCache();
 
@@ -35,7 +35,7 @@ class ReactionService {
         },
         { new: true }
       )
-    ])) as unknown as [IUserDocument, IReactionDocument, IPostDocument];
+    ])) as [IUserDocument, IReactionDocument, IPostDocument];
 
     if (updatedReaction[0].notifications.reactions && userTo !== userFrom) {
       const notificationModel: INotificationDocument = new NotificationModel();

@@ -41,10 +41,10 @@ export interface IAuthMock {
   instagram?: string;
   twitter?: string;
   youtube?: string;
-  messages?: boolean,
-  reactions?: boolean,
-  comments?: boolean,
-  follows?: boolean
+  messages?: boolean;
+  reactions?: boolean;
+  comments?: boolean;
+  follows?: boolean;
 }
 
 export const authUserPayload: AuthPayload = {
@@ -62,7 +62,7 @@ export const authMock = {
   username: 'Manny',
   email: 'manny@me.com',
   avatarColor: '#9c27b0',
-  createdAt: new Date(),
+  createdAt: '2022-08-31T07:42:24.451Z',
   save: () => {},
   comparePassword: () => false
 } as unknown as IAuthDocument;
